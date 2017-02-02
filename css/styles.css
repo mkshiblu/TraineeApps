@@ -1,4 +1,37 @@
+.nav-bg{
+  background: url('images/hex.png');
+}
+.nav-bottom-bg{
+background: url('images/jigsaw.png');
+background: url('images/greeny.png');
 
+}
+
+.theme{
+
+  background-color:black ;
+}
+.logo{
+
+  width: 90px;
+  height: 100px;
+}
+.brand{
+
+
+}
+.appimage{
+
+    width: 130px;
+    height: 190px;
+}
+
+.card{
+
+  display: inline;
+  width: 150px;
+  height: 120px;
+}
 /**=============================
 NAVBAR STYLE STARTS
 *=============================*/
@@ -78,6 +111,7 @@ NAVBAR STYLE ENDS
 .btn-primary {
     box-shadow:0 0 0 1px #428bca inset, 0 0 0 2px rgba(255,255,255,0.15) inset, 0 8px 0 0 #357ebd, 0 8px 0 1px rgba(0,0,0,0.4), 0 8px 8px 1px rgba(0,0,0,0.5);
     background-color:#428bca;
+    color: white;
 }
  .btn-success {
     box-shadow:0 0 0 1px #5cb85c inset, 0 0 0 2px rgba(255,255,255,0.15) inset, 0 8px 0 0 #4cae4c, 0 8px 0 1px rgba(0,0,0,0.4), 0 8px 8px 1px rgba(0,0,0,0.5);
@@ -86,14 +120,17 @@ NAVBAR STYLE ENDS
  .btn-info {
     box-shadow:0 0 0 1px #5bc0de inset, 0 0 0 2px rgba(255,255,255,0.15) inset, 0 8px 0 0 #46b8da, 0 8px 0 1px rgba(0,0,0,0.4), 0 8px 8px 1px rgba(0,0,0,0.5);
     background-color:#5bc0de;
+    color: white;
 }
 .btn-warning {
     box-shadow:0 0 0 1px #f0ad4e inset, 0 0 0 2px rgba(255,255,255,0.15) inset, 0 8px 0 0 #eea236, 0 8px 0 1px rgba(0,0,0,0.4), 0 8px 8px 1px rgba(0,0,0,0.5);
     background-color:#f0ad4e;
+    color: white;
 }
 .btn-danger {
     box-shadow:0 0 0 1px #c63702 inset, 0 0 0 2px rgba(255,255,255,0.15) inset, 0 8px 0 0 #C24032, 0 8px 0 1px rgba(0,0,0,0.4), 0 8px 8px 1px rgba(0,0,0,0.5);
     background-color:#c63702;
+    color: white;
 }
 
 /*====================
@@ -125,25 +162,23 @@ NAVBAR STYLE ENDS
 3d textfield ends
 =====================*/
 
-
-.logo{
-
-	width: 90px;
-	height: 100px;
-}
-.brand{
-
-
-}
-.appimage{
-
-    width: 130px;
-    height: 190px;
+body
+{
+    background-color: #1b1b1b;
+    padding-top: 40px;
 }
 
-.card{
 
-	display: inline;
-	width: 150px;
-	height: 120px;
+.input-group-addon
+{
+    background-color: rgb(50, 118, 177);
+    border-color: rgb(40, 94, 142);
+    color: rgb(255, 255, 255);
 }
+.form-control:focus
+{
+    background-color: rgb(50, 118, 177);
+    border-color: rgb(40, 94, 142);
+    color: rgb(255, 255, 255);
+}
+.form-signup input[type="text"],.form-signup input[type="password"] { border: 1px solid rgb(50, 118, 177); }

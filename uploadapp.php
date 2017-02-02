@@ -92,7 +92,7 @@
 <?php
   if (empty($userid)) {
     # code...
-    echo "you have to be logged in, to upload an app ";
+    echo "<br><br>you have to be logged in, to upload an app ";
     exit();
   }
 ?>

@@ -1,14 +1,7 @@
- <?php
-                 if (isset($_SESSION['username'])){
-                  
-              
-?>
-
-
-<ul class="nav navbar-nav navbar-right">
+ <ul class="nav navbar-nav navbar-right">
     <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Account
         <b class="caret"></b></a>
-        <ul class="dropdown-menu">
+        <ul class="dropdown-menu" style="z-index:10;">
             <li>
                 <div class="navbar-content">
                     <div class="row">
@@ -46,24 +39,3 @@
         </ul>
     </li>
 </ul>
-<?php
-  }//if 
-                else{
-            ?>
-
-                
-                <ul class="nav navbar-nav navbar-right">
-                    <li id="nav-register-btn" class="">
-                        <a  href = "#login-dialog" class = "" data-toggle = "modal">Login</a>
-                    </li>
-                    <li id="nav-login-btn" class="">
-                        <a href="signup.php">
-                            <i class="icon-login"></i>
-                            <strong>Sign up</strong>
-                        </a>
-                    </li>
-                </ul>
-                <?php 
-
-                    }//close the else tag
-                ?>

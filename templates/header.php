@@ -13,8 +13,10 @@ require_once('php/startsession.php');
   ?>
   
   <!--LINK STYLE SHEETS -->
-
   <link rel="stylesheet"  href="css/bootstrap.css">
     <link rel="stylesheet"  href="css/styles.css" />
+     <link rel="stylesheet"  href="css/navbar.css" />
+     <link rel="stylesheet"  href="css/colors.css" />
+     <link rel="stylesheet"  href="css/appcard.css" />
  </head>
-<body>
+<body class="theme">

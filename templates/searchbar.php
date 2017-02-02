@@ -7,17 +7,17 @@
 	*/
 ?>
 
-<div class="container">
+<div class="" >
 	<div class="row">
 		<div class="col-sm-3">
-			<a class="btn3d btn btn-default" href="uploadapp.php">Upload app</a>
+			<a class="btn btn-warning btn3d" href="uploadapp.php">Upload app</a>
 		</div>
 		<div class="col-sm-5">
             <form method = "get" action="search.php">
 	            <div class="input-group">
-	              <input type="text" class="form-control textfield" placeholder="App name" name="search" value="<?php if (!empty($search)) echo $search; ?>">
+	              <input type="text" class="form-control textfield btn3d" placeholder="App name" name="search" value="<?php if (!empty($search)) echo $search; ?>">
 	              <span class="input-group-btn">
-	              <button class="btn btn-default " type="submit">
+	              <button class="btn btn-default btn3d" type="submit">
 	              <span class="glyphicon glyphicon-search"></span>
 	             </button>
 	            </div><!-- /input-group -->
@@ -25,6 +25,7 @@
         </div>
 	</div>
 </div>
+
 <!--
 <form method = "get" action="search.php">
 	<input type="text" placeholder="App name" name="search" value="<?php if (!empty($search)) echo $search; ?>">
