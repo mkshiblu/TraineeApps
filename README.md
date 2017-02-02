@@ -12,5 +12,5 @@ A demo app store for amateur app developers. It was the lab project for `Databas
 
 ### Notes
 
-1. The project was a university project which I wrote about ~3 years ago. So it may not be written as in industry standard.
+1. The project was a university project which I wrote about ~3 years ago. So it may not be written in a industry standard.
 2. I uploaded the original source as it is.
