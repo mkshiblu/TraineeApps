@@ -1,6 +1,6 @@
 <?php
   require_once('php/dbconnectvars.php');
-
+  require_once('php/appvariables.php');
   // Start the session
   session_start();
 
@@ -34,8 +34,9 @@
           $_SESSION['username'] = $row['username'];
           setcookie('userid', $row['userid'], time() + (60 * 60 * 24 * 30));    // expires in 30 days
           setcookie('username', $row['username'], time() + (60 * 60 * 24 * 30));  // expires in 30 days
-          $home_url = 'http://' . $_SERVER['HTTP_HOST'] . /*dirname($_SERVER['PHP_SELF'])*/ '/v8' . '/index.php';
-          header('Location: ' . $home_url);
+          //$home_url = 'http://' . $_SERVER['HTTP_HOST'] . /*dirname($_SERVER['PHP_SELF'])*/ '/v8' . '/index.php';
+
+          header('Location: ' . HOME_URL);
         }
         else {
           // The username/password are incorrect so set an error message
@@ -50,30 +51,3 @@
   }
 ?>
 
-
-
-<?php
-  // If the session var is empty, show any error message and the log-in form; otherwise confirm the log-in
-  if (empty($_SESSION['userid'])) {
-    echo '<p class="error">' . $error_msg . '</p>';
-?>
-
-  <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-    <fieldset>
-      <legend>Log In</legend>
-      <label for="username">Username:</label>
-      <input type="text" name="username" value="<?php if (!empty($username)) echo $username; ?>" /><br />
-      <label for="password">Password:</label>
-      <input type="password" name="password" />
-    </fieldset>
-    <input type="submit" value="Log In" name="submit" />
-  </form>
-  <h5> or </hp>
-    <a href="signup.php">Sign Up</a>
-<?php
-  }
-  else {
-    // Confirm the successful log-in
-    echo('<p class="login">You are logged in as ' . $_SESSION['username'] . '.</p>');
-  }
-?>

@@ -17,10 +17,6 @@
 
 
 
-
-	
-//mov this into other file
-	define(HOME_URL , 'http://' . $_SERVER['HTTP_HOST'] . '/v8/index.php');
 //users table's column names
 
 	define (userid,'userID');

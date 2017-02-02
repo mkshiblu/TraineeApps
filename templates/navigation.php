@@ -21,6 +21,7 @@ profile picture sign in and logout button*/
 		echo '<a href="signup.php">Sign Up</a>';
 	}*/
 //	echo '<hr />';
+	//require_once('login.php');
 ?>
 
 		<div class = " navbar-inverse navbar-static-top">    <!--navbar-fixed-bottom will place this as a footer -->
@@ -42,8 +43,8 @@ profile picture sign in and logout button*/
 								echo '<a href="php/logout.php" class="btn btn-danger">Logout<a>';
 							}
 							else{  //otherwise show login and signup button
-						//		echo '<a  href = "#login-dialog" class = "btn btn-success navbar-btn" data-toggle = "modal">Login</a>';
-							echo '<a  href = "login.php" class = "btn btn-success navbar-btn">Login</a>';
+								echo '<a  href = "#login-dialog" class = "btn btn-success navbar-btn" data-toggle = "modal">Login</a>';
+							//echo '<a  href = "login.php" class = "btn btn-success navbar-btn">Login</a>';
 						
 								echo '<a href = "signup.php" class="btn btn-info navbar-btn">Register</a>';
 							}//else
@@ -57,7 +58,7 @@ profile picture sign in and logout button*/
 
 		
 		<!--creating the navigation area -->
-		<div class="navbar navbar-inverse navbar-static-top">
+		<div class="navbar navbar-default navbar-static-top">
 				<div class="container">
 					
 					<!--navbar toggle button-->

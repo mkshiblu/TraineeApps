@@ -1,5 +1,5 @@
 <?php
-	require_once('templates/startsession.php');
+//	require_once('php/startsession.php');
 	//needs to set page title before including header template
 	$page_title = 'Appstore | upload Apps';
 	require_once('templates/header.php');//includes stylesheets etc

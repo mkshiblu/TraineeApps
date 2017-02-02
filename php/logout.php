@@ -19,6 +19,6 @@
   setcookie('username', '', time() - 3600);
 
   // Redirect to the home page
-  $home_url = 'http://' . $_SERVER['HTTP_HOST'] . /*dirname($_SERVER['PHP_SELF'])*/ '/v8/index.php';
-  header('Location: ' . $home_url);
+  require_once('appvariables.php');
+  header('Location: ' . HOME_URL);
 ?>

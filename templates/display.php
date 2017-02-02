@@ -3,7 +3,7 @@
 	function displayApp($row){
 
 
-	echo '<h3>' .$row['app_name'] . '</h3>';	
+	echo '<a href = "'.$row['app_name'].'" ><h3>' .$row['app_name'] . '</h3></a>';	
 	echo '<h5>Rating :'. $row['rating'] . '</h5>';
 	echo '<h5>Release Date :'. $row['upload_date'] . '</h5>';
 	echo '<h5>total downloads :'. $row['total_downloads'] . '</h5>';
@@ -19,11 +19,44 @@
 		}
 
 		$dlpath = APP_FILE_PATH. $row['file'];
-		echo '<a href="'. $dlpath .'">Download</a>';
+
+		//echo '<a  class="btn btn-primary " href="'. $dlpath .'">Download</a>';
+		?>
+
+		<form method="post" action="php/downloadapp.php">
+			 <input type="hidden" name="app_id" value="<?php echo  $row['app_id']; ?>" />
+			 <input type="hidden" name="file" value="<?php echo  $dlpath; ?>" />
+
+			<input type="submit" value="Download" name="Download">
+
+		</form>
+
+		<?php
 
 
 	}//fn
 
+	function displayAppsByTable($data){
+		?>
+		<table>
+		 <tr>	
+		
+		<?php
+		if (empty($data)) {
+		# code...
+		echo 'no result found';
+		}
+		else
+		// Loop through the array of app data, formatting it as HTML
+		while ($row = mysqli_fetch_array($data)) {
+			echo '<td>';
+			displayApp($row);
+			echo '</td>';
+			
+		}//while
+		echo '</tr>';
+		echo '</table>';
 
+	}
 
 ?>

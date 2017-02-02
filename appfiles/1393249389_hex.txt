@@ -1,0 +1,20 @@
+I have been playing around with a heavy-lift hexacopter.
+
+Some data:
+Size: 70cm motor-to-motor
+Weight: 3kg with batteries.
+Motors: NTM Series 35-36A 910Kv / 350W
+Propellers: APC 12X3.8
+ESC: Turnigy Plush 25A
+Controller: KK
+Batteries: 6 x Turnigy nano-tech 2200mah 3S 25~50C
+Frame: aluminium rectangular tube 15 x 25 mm/
+
+
+Some performance data:
+
+2.2kg payload:
+11.34A per motor, 68.04A total
+132.6W per motor, 795.6W total
+
+9 min time
