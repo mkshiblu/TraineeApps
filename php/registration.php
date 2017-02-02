@@ -20,7 +20,7 @@ $isRegSuccessfull = false;
  if (isset($_POST['submit'])){
 
    //save the data inserted by the user
-	$userName = $_POST['username'];
+	$username = $_POST['username'];
 	$password = $_POST['password'];
 //	$userPicName =  $_FILES['userpic']['name']; //abc.gif, bdc.png?
 
@@ -28,7 +28,7 @@ $isRegSuccessfull = false;
   //  $userPic = '' . time() .$userPicName; //avoid replacement of same name img by add time() 
 	//if image is not valid then $userPicName = NULL;
 
-	echo $userName;
+	echo $username;
 	echo $password;
 	//echo $userPic;
 
@@ -50,8 +50,8 @@ $isRegSuccessfull = false;
 
 	//create insert query
 	 // 		 "INSERT INTO guitarwars VALUES (0, NOW(), '$name', '$score', '$screenshot')";
-	$query = "INSERT INTO  users (userName, password/* ,userPic*/) 
-						  VALUES ('$userName', '$password'/*, '$userPic'*/)";
+	$query = "INSERT INTO  users (username, password/* ,userPic*/) 
+						  VALUES ('$username', '$password'/*, '$userPic'*/)";
 	
 	//query
 	$result = mysqli_query($dbc,$query);
@@ -68,7 +68,7 @@ $isRegSuccessfull = false;
 */
 
 	$isRegSuccessfull = true;	
-	$userID = mysqli_insert_id($dbc); //this function return last inserted row's id i.e. userID
+	$userid = mysqli_insert_id($dbc); //this function return last inserted row's id i.e. userID
 
 
 	mysqli_close($dbc);

@@ -1,3 +1,10 @@
+<?php
+
+ 	//session_destroy();//start session for the user
+ 	require_once('php/login.php');
+	//echo $steps;
+	
+?>
 <!DOCTYPE HTML>
 <html>
 	
@@ -16,13 +23,28 @@
 					<!--<p class = "navbar-text pull-left"></p>-->
 
 					<!--logo+appname -->
-					<a href="index.php" class="navbar-brand" ><img src="images/logo.jpg" class="logo" >  Trainee Apps</a>
+					<a href="index.php" class="navbar-brand" ><img src="images/logo.png" class="logo" >  Trainee Apps</a>
 
 					<!--NEED SOLN NOT WORKING PROPERLY WHEN NAVBAR IS OPEN -->
 					<div class = " pull-right">
-						<a  href = "#login-dialog" class = "btn btn-success navbar-btn" data-toggle = "modal">Login</a>
-						<a href = "createaccount.php" class="btn btn-info navbar-btn">Register</a>
+					<div class="row=5">	
+						<?php	
+							//require_once('php/logincheck.php');
+							//if user is logged in show his name and picture
+							if(isLoggedIn()){ 
+								echo'<img src="images/unverified.png" class="logo">';
+								echo '<a href="" class="btn btn-success">'.$_SESSION['username'] .'</a>';	
+								echo '<a href="php/logout.php" class="btn btn-danger">Logout<a>';
+							}
+							else{  //otherwise show login and signup button
+								echo '<a  href = "#login-dialog" class = "btn btn-success navbar-btn" data-toggle = "modal">Login</a>';
+								echo '<a href = "createaccount.php" class="btn btn-info navbar-btn">Register</a>';
+							}//else
+						?>
+
 					</div>
+					</div>
+
 				</div>
 		</div>
 
@@ -85,13 +107,20 @@
 							
 						</div>	<!--the login form consist of user name field,password field ,cancel and login button -->
 						<div class = "modal-body">
-							<form>
-								<input type="text" placeholder = "Username">
-								<input type = "text" placeholder = "password">
-								<button type= "submit" class = "btn btn-success" >Login</button>
+
+							 <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+								<!--TO DO SHOW ERROR MSG IF USER NOT FOUND-->
+								<input type="text" name ="username" placeholder = "Username">
+								<input type = "text" name="password" placeholder = "password">
+								<button type= "submit" name="submit" class = "btn btn-success" >Login</button>
 							</form>
 						</div>
 						<div class = "modal-footer">
+
+							<?php
+								echo '<div class = "alert alert-info">'.$error_msg.'</div>';
+							?>
+							<!--TODOif login not successful echo the errors an re-ask the user else-->
 							<p>Don't have an account? <a class = "btn btn-info" href = "createaccount.php">Register</a></p>
 						</div>
 					</div>

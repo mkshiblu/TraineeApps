@@ -1,3 +1,30 @@
+<?php
+/*THIS SCRIPT CAN BE CALLED IN TWO WAYS.FIRST, CLICKING ON REGISTER  BUTTON IN HOMEPAGE 
+AND SECONDLY CLICKING ON THE SUBMIT BUTTON  IN CREATEACCOUNT I.E. THIS PAGE
+ WHICH ALSO GENERATES A 'POST' REQUEST*/
+session_start();
+//script for registering an account
+ require_once('php/logincheck.php');
+	require_once('php/registration.php');
+	
+
+	//if regsitration is successfull then remove the registration form and display successful msg
+	if($isRegSuccessfull){
+	//=============TODO REMOVE THE REGISTRATION FORM =====================
+		//set sessions with username,user id and profile picture
+	saveLogin($userid, $username);
+	
+//	echo $_SESSION['username'];
+	//display success msg
+	echo '<div class = "alert alert-success">You have successfully created an account.start uploading NOW!</div>';
+
+	//provide a link to go back to homepage which sends username and picture using a GET request
+	echo '<a class="btn btn-success" href="index.php">Go Back</a>';
+  
+		//necessaray?!
+		$isRegSuccessfull = false;
+	}//if
+?>
 <!DOCTYPE HTML>
 <html>
 	
@@ -138,26 +165,3 @@
 	</body>	
 </html>
 
-
-
-<?php
-/*THIS SCRIPT CAN BE CALLED IN TWO WAYS.FIRST, CLICKING ON REGISTER  BUTTON IN HOMEPAGE 
-AND SECONDLY CLICKING ON THE SUBMIT BUTTON  IN CREATEACCOUNT I.E. THIS PAGE
- WHICH ALSO GENERATES A 'POST' REQUEST*/
-
-//script for registering an account
-	require_once('php/registration.php');
-
-	//if regsitration is successfull then remove the registration form and display successful msg
-	if($isRegSuccessfull){
-	//=============TODO REMOVE THE REGISTRATION FORM =====================
-	//display success msg
-	echo '<div class = "alert alert-success">You have successfully created an account.start uploading NOW!</div>';
-
-	//provide a link to go back to homepage which sends username and picture using a GET request
-	echo '<a class="btn btn-success" href="index.php?id=' .$userID. '&amp;username=' . $userName . '">Go Back</a>';
-  
-		//necessaray?!
-		$isRegSuccessfull = false;
-	}//if
-?>
