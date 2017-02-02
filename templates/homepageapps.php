@@ -14,7 +14,7 @@
 	?>
 	
 	<div>
-		<br><br><br><br>
+		<br><br><br>
 	</div>
 <?php
 	echo '<h2>Latest Release:</h2>';

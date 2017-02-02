@@ -1,7 +1,6 @@
 <?php
 
 	function displayApp($row){
-
 if (is_file(APP_IMG_PATH . $row['image']) && filesize(APP_IMG_PATH . $row['image']) > 0) {
 			echo '<img class="card" src="' . APP_IMG_PATH . $row['image'] . '" alt="' . $row['app_name'] .
 			'" />';
@@ -12,11 +11,11 @@ if (is_file(APP_IMG_PATH . $row['image']) && filesize(APP_IMG_PATH . $row['image
 		}
 
 
-	echo '<a class="app-title" href = "'.$row['app_name'].'" ><h3>' .$row['app_name'] . '</h3></a>';	
-	echo '<h4 class="app-rating" >Rating :'. $row['rating'] . '</h5>';
-	echo '<h4 class="app-releasedate">Release Date :'. $row['upload_date'] . '</h5>';
-	echo '<h4 class="app-downloads">total downloads :'. $row['total_downloads'] . '</h5>';
-	echo '<h4 class="app-uploader">uploader :'. $row['username'] . '</h5>'; 
+	echo '<a class="app-title" href = "viewapp.php?id='.$row['app_id'].'" ><h3>' .$row['app_name'] . '</h3></a>';	
+	echo '<h5  class="app-rating" >Rating :'. $row['rating'] . '</h5>';
+	echo '<h5 class="app-releasedate">Release Date :'. $row['upload_date'] . '</h5>';
+	echo '<h5 class="app-downloads">total downloads :'. $row['total_downloads'] . '</h5>';
+	echo '<h5 class="app-uploader">uploader :'. $row['username'] . '</h5>'; 
 	echo '<p class="app-description">'. $row['description'] . '</p>';
 
 	

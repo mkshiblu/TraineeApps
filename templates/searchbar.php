@@ -7,7 +7,7 @@
 	*/
 ?>
 
-<div class="" >
+<div class="container" >
 	<div class="row">
 		<div class="col-sm-3">
 			<a class="btn btn-warning btn3d" href="uploadapp.php">Upload app</a>
@@ -24,6 +24,7 @@
 	       	</form>
         </div>
 	</div>
+	<br><br>
 </div>
 
 <!--

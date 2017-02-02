@@ -2,6 +2,7 @@
 /*
 this script can remove newly uploaded apps waiting for approval from dababase
 */
+require_once('php/authorize.php');
 	require_once('templates/header.php');
 	require_once('php/dbconnectvars.php');
 	require_once('php/SQLS.php');

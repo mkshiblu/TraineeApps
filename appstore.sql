@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 05, 2014 at 09:41 AM
+-- Generation Time: Jun 03, 2014 at 05:10 AM
 -- Server version: 5.1.33
 -- PHP Version: 5.2.9
 
@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS `apps` (
   `file` varchar(255) NOT NULL,
   `Approved` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`app_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=14 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=15 ;
 
 --
 -- Dumping data for table `apps`
@@ -50,8 +50,33 @@ INSERT INTO `apps` (`app_id`, `app_name`, `image`, `rating`, `upload_date`, `use
 (4, 'Town Race', 'race.jpg', 3.8, '2014-01-01 00:00:00', 11, 325, 'race with friends', 'Town Race.apk', 1),
 (12, 'Metal gear', '1393304859_death.jpg', 3.5, '2014-02-25 11:07:39', 4, 5, 'Shoot or die', '1393304859_plantvszombie.apk', 1),
 (5, 'Black Fag', 'Black Fag.jpg', 5, '2014-02-06 20:01:39', 6, 863, 'Play As an assassin', 'Black Fag.apk', 1),
-(6, 'Diablo', 'Diablo.jpg', 4.7, '2014-02-04 20:09:31', 7, 0, 'A journey has been started', 'diablo.apk', 1),
+(6, 'Diablo', 'Diablo.jpg', 4.7, '2014-02-04 20:09:31', 7, 1, 'A journey has been started', 'diablo.apk', 1),
 (13, 'Plant vs zombie', '1393482641_plant vs zombie.jpg', 0, '2014-02-27 12:30:41', 15, 0, 'zombie are here', '1393482641_plantvszombie.apk', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `comments`
+--
+
+CREATE TABLE IF NOT EXISTS `comments` (
+  `comment_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `app_id` int(10) unsigned NOT NULL,
+  `userid` int(10) unsigned NOT NULL,
+  `comment` text NOT NULL,
+  `date` datetime NOT NULL,
+  PRIMARY KEY (`comment_id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+
+--
+-- Dumping data for table `comments`
+--
+
+INSERT INTO `comments` (`comment_id`, `app_id`, `userid`, `comment`, `date`) VALUES
+(1, 1, 7, 'Just finished playing this game. awesome.', '2014-03-02 23:19:22'),
+(2, 1, 10, 'I''ve also download this game.Do you know any extension?or any version?', '2014-03-03 23:20:31'),
+(3, 5, 1, 'Awsome graphics 5* for me', '2014-03-05 08:57:01'),
+(4, 4, 10, 'Took me 10 hours to complete', '2014-03-06 08:57:58');
 
 -- --------------------------------------------------------
 

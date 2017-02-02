@@ -12,12 +12,9 @@
 
 	echo '<div class="">';
 	
-		echo '<div class="container">';
+		
 		require_once('templates/searchbar.php');
-echo '</div>';
-
 		require_once('templates/slider/slider.php');
-
 		//carousel
 		echo '<div class="container">';
 		//require_once('templates/carousel.php');

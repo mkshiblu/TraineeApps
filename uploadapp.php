@@ -21,11 +21,12 @@
 
 
   if (isset($_POST['submit'])) {
-    // Grab the score data from the POST
-    $appname = $_POST['appname'];
-    $description = $_POST['description'];
-    $appimage = time() . '_' . $_FILES['appimage']['name'];
-    $appfile = time() . '_' . $_FILES['appfile']['name'];
+    // Grab the upload data from the POST
+    $appname = mysqli_real_escape_string($dbc, trim($_POST['appname']));
+    $description = mysqli_real_escape_string($dbc, trim($_POST['description']));
+   // $appimage = time() . '_' . $_FILES['appimage']['name'];
+     $appimage = time() . '_' . mysqli_real_escape_string($dbc, trim($_FILES['appimage']['name']));
+    $appfile = time() . '_' . mysqli_real_escape_string($dbc, trim($_FILES['appfile']['name']));
     $image_type = $_FILES['appimage']['type'];
     $image_size = $_FILES['appimage']['size']; 
 
