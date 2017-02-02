@@ -1,7 +1,7 @@
-<div class="grad-gre nav-bg">
+<div class=" shadow nav-bg ">
         <div class = "navbar-static-top ">    <!--navbar-fixed-bottom will place this as a footer -->
                 <div class = "container  ">
-                    <a href="index.php" class="navbar-brand" ><img src="css/images/penguin.png" class="logo" >  Trainee Apps</a>
+                    <a href="index.php" class="navbar-brand project-name" ><img src="css/images/penguin.png" class="logo " >  Trainee Apps</a>
 
              <?php
              require_once('php/appvariables.php');
@@ -14,7 +14,7 @@
                         <a  href = "#login-dialog" class = "btn btn-default btn3d navbar-btn" data-toggle = "modal"><strong>Login</strong></a>
                     </li>
                     <li id="nav-register-btn " >
-                        <a class="btn btn-default btn3d navbar-btn" href="signup.php">
+                        <a class="btn btn-primary btn3d navbar-btn" href="signup.php">
                             <strong>Sign up</strong>
                         </a>
                     </li>
@@ -46,10 +46,10 @@
                             <ul class ="nav navbar-nav navbar-left fancyNav">
                                 <li class="active"> <a class="nav-tab " href="index.php" >Home</a></li>
                                 <li> <!--drop down menu for top 100 apps -->
-                                    <a href="" class="dropdown-toggle" data-toggle = "dropdown">Top 100 <b class = "caret"></b></a>
+                                    <a href="" class="dropdown-toggle" data-toggle = "dropdown">Top Apps <b class = "caret"></b></a>
                                     <ul class = "dropdown-menu">
-                                        <li><a href="" >Apps</a></li>
-                                        <li><a href="" >Games</a></li>
+                                        <li><a href="top10apps.php" >Downloads</a></li>
+                                        <li><a href="top10downlaods.php" >Rating</a></li>
                                         <li><a href="" >Mixed</a></li>  
                                     </ul>   
                                 </li>

@@ -2,6 +2,8 @@
 //	require_once('php/startsession.php');
 	//needs to set page title before including header template
 	$page_title = 'Appstore | upload Apps';
+  //first place the login script
+  require_once('php/login.php');
 	require_once('templates/header.php');//includes stylesheets etc
 	require_once('templates/navigation.php');
 	require_once('templates/searchbar.php');
@@ -63,6 +65,7 @@
                 $appimage = "";
 
                 mysqli_close($dbc);
+                require_once('templates/loginform.php');
                 require_once("templates/footer.php");
                 exit();
 
@@ -93,6 +96,9 @@
   if (empty($userid)) {
     # code...
     echo "<br><br>you have to be logged in, to upload an app ";
+
+require_once('templates/loginform.php');
+  require_once("templates/footer.php");
     exit();
   }
 ?>
@@ -116,6 +122,6 @@
   </form>
 
 <?php
-
+require_once('templates/loginform.php');
 	require_once("templates/footer.php");
 ?>

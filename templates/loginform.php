@@ -16,10 +16,10 @@
             </div>  <!--the login form consist of user name field,password field ,cancel and login button -->
             <div class = "modal-body">
 
-               <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+               <form class="well" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                 <!--TO DO SHOW ERROR MSG IF USER NOT FOUND-->
                 <input type="text" name ="username" placeholder = "Username" value="<?php if (!empty($username)) echo $username; ?>">
-                <input type = "text" name="password" placeholder = "password">
+                <input type = "password" name="password" placeholder = "password">
                 <button type= "submit" name="submit" class = "btn btn-success" >Login</button>
               </form>
             </div>
@@ -51,6 +51,6 @@
   }
   else {
     // Confirm the successful log-in
-    echo('<p class="login">You are logged in as ' . $_SESSION['username'] . '.</p>');
+    //echo('<p class="login">You are logged in as ' . $_SESSION['username'] . '.</p>');
   }
 ?>

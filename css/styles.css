@@ -1,15 +1,88 @@
+.project-name{
+  font: fantasy;
+  font-size:30px; font-style:italic; 
+  color: BLACK;
+
+  text-shadow:  3 3px 0 rgba(200,200,200,.5)
+
+}
+.app{
+
+  background: black;
+  padding: 20px
+
+}
+
+.app h4{
+
+  font: sans-serif;
+  
+  text-decoration:none;
+  color: rgb(200,200,200);
+  text-shadow:  0 1px 0 rgba(200,200,200,.5);
+  letter-spacing: 1px;
+  /*optional gradients
+   background: -moz-radial-gradient(center 80px 45deg, circle cover, rgba(1,149,214,1) 0%, rgba(0,0,68, 1) 100%);*/
+
+}
+.app-title{
+  font-style:"Emblema one",serif; 
+  color: WHITE;
+  text-shadow:  0 1px 0 rgba(200,200,200,.5);
+  letter-spacing: 1px;
+
+}
+
+.app-description
+{
+  font-size:17px; font-style:"Emblema one",sans-serif; color: rgb(150,250,150);
+
+}
+
+.app-uploader{font-size:17px; font-style:"Emblema one",sans-serif; color: rgb(100,255,100);
+
+}
+
+
+.app-rating
+{
+  font-size:17px; font-style:"Emblema one",sans-serif; color:navy;
+
+
+}
+
+/*
+
+.app-downloads{font-size:17px; font-style:"Emblema one",sans-serif; color:navy;
+
+
+}
+
+.app-releasedate{font-size:17px; font-style:"Emblema one",sans-serif; color:navy;
+
+}
+
+*/
 .nav-bg{
   background: url('images/hex.png');
 }
 .nav-bottom-bg{
-background: url('images/jigsaw.png');
-background: url('images/greeny.png');
+b ackground: url('images/jigsaw.png');
 
+}
+.shadow{
+    box-shadow: 0 0 10px  10px rgba(0,0,0,.4), 0 1px 2px rgba(0,0,0,.8) inset;
+}
+.slider{
+
+  width: 100%;
+  background: url('images/');
 }
 
 .theme{
 
-  background-color:black ;
+  background: url('images/wood048.jpg');
+
 }
 .logo{
 
@@ -162,23 +235,3 @@ NAVBAR STYLE ENDS
 3d textfield ends
 =====================*/
 
-body
-{
-    background-color: #1b1b1b;
-    padding-top: 40px;
-}
-
-
-.input-group-addon
-{
-    background-color: rgb(50, 118, 177);
-    border-color: rgb(40, 94, 142);
-    color: rgb(255, 255, 255);
-}
-.form-control:focus
-{
-    background-color: rgb(50, 118, 177);
-    border-color: rgb(40, 94, 142);
-    color: rgb(255, 255, 255);
-}
-.form-signup input[type="text"],.form-signup input[type="password"] { border: 1px solid rgb(50, 118, 177); }

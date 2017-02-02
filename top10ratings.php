@@ -1,22 +1,18 @@
 <?php
-//first place the login script
-	require_once('php/login.php');
 
-	require_once('php/startsession.php');
+	
 	//needs to set page title before including header template
-	$page_title = '|Search';
+	$page_title = 'topapps';
 	require_once('templates/header.php');//includes stylesheets etc
 	require_once('templates/navigation.php');
-
-	$search= $_GET['search'];
-
 	require_once('templates/searchbar.php');
+
 	require_once ('php/dbconnectvars.php');
 	require_once ('php/appvariables.php');
 	require_once('templates/display.php');
 
 	$dbc=mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-	$query="SELECT * FROM apps WHERE app_name like '%$search%'";
+	$query="SELECT * FROM apps ORDER BY rating DESC limit 10";
 	$data=mysqli_query($dbc,$query);
 
 
@@ -34,8 +30,9 @@
 				
 			}//while
 		}
-//render the login modal
-    require_once('templates/loginform.php');
+
+
+	
 	require_once("templates/footer.php");
 
 ?>

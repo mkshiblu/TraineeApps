@@ -36,7 +36,7 @@
           setcookie('username', $row['username'], time() + (60 * 60 * 24 * 30));  // expires in 30 days
           //$home_url = 'http://' . $_SERVER['HTTP_HOST'] . /*dirname($_SERVER['PHP_SELF'])*/ '/v8' . '/index.php';
 
-          header('Location: ' . HOME_URL);
+          header('Location: index.php');
         }
         else {
           // The username/password are incorrect so set an error message

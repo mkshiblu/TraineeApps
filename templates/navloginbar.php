@@ -1,5 +1,5 @@
  <ul class="nav navbar-nav navbar-right">
-    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Account
+    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $_SESSION['username']; ?>
         <b class="caret"></b></a>
         <ul class="dropdown-menu" style="z-index:10;">
             <li>
@@ -30,7 +30,7 @@
                                 <a href="#" class="btn btn-default btn-sm">Change Passowrd</a>
                             </div>
                             <div class="col-md-6">
-                                <a href="php/logout.php" class="btn btn-default btn-sm pull-right">Log Out</a>
+                                <a href="php/logout.php" class="btn btn-danger btn-sm pull-right">Log Out</a>
                             </div>
                         </div>
                     </div>

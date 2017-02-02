@@ -1,6 +1,7 @@
 <?php
 
 	function displayApp($row){
+
 if (is_file(APP_IMG_PATH . $row['image']) && filesize(APP_IMG_PATH . $row['image']) > 0) {
 			echo '<img class="card" src="' . APP_IMG_PATH . $row['image'] . '" alt="' . $row['app_name'] .
 			'" />';
@@ -11,18 +12,19 @@ if (is_file(APP_IMG_PATH . $row['image']) && filesize(APP_IMG_PATH . $row['image
 		}
 
 
-	echo '<a href = "'.$row['app_name'].'" ><h3>' .$row['app_name'] . '</h3></a>';	
-	echo '<h5>Rating :'. $row['rating'] . '</h5>';
-	echo '<h5>Release Date :'. $row['upload_date'] . '</h5>';
-	echo '<h5>total downloads :'. $row['total_downloads'] . '</h5>';
-	echo '<h5>uploader :'. $row['username'] . '</h5>'; 
-	echo '<p>'. $row['description'] . '</p>';
+	echo '<a class="app-title" href = "'.$row['app_name'].'" ><h3>' .$row['app_name'] . '</h3></a>';	
+	echo '<h4 class="app-rating" >Rating :'. $row['rating'] . '</h5>';
+	echo '<h4 class="app-releasedate">Release Date :'. $row['upload_date'] . '</h5>';
+	echo '<h4 class="app-downloads">total downloads :'. $row['total_downloads'] . '</h5>';
+	echo '<h4 class="app-uploader">uploader :'. $row['username'] . '</h5>'; 
+	echo '<p class="app-description">'. $row['description'] . '</p>';
 
 	
 		$dlpath = APP_FILE_PATH. $row['file'];
 
 		//echo '<a  class="btn btn-primary " href="'. $dlpath .'">Download</a>';
 		?>
+		
 
 		<form method="post" action="php/downloadapp.php">
 			 <input type="hidden" name="app_id" value="<?php echo  $row['app_id']; ?>" />
@@ -48,7 +50,7 @@ if (is_file(APP_IMG_PATH . $row['image']) && filesize(APP_IMG_PATH . $row['image
 		else
 		// Loop through the array of app data, formatting it as HTML
 		while ($row = mysqli_fetch_array($data)) {
-			echo '<td>';
+			echo '<td class="app grad-blue shadow">';
 			displayApp($row);
 			echo '</td>';
 			

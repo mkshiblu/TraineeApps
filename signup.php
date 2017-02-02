@@ -1,16 +1,11 @@
 <?php
 
-///	require_once('php/startsession.php');
-	//needs to set page title before including header template
-	$page_title = 'Appstore For All';
-	require_once('templates/header.php');//includes stylesheets etc
-	require_once('templates/navigation.php');
-
 //==================================
-	//PERFORM SIGNUP OP
+  //PERFORM SIGNUP OP
 //=====================================
  require_once('php/dbconnectvars.php');
  require_once('php/appvariables.php');
+    
 
   // Connect to the database
   $dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
@@ -36,17 +31,27 @@
         mysqli_query($dbc, $query);
 
          $target = USER_IMG_PATH.$userpic;
-	    //move the uploaded file to iamges folder
+      //move the uploaded file to iamges folder
       move_uploaded_file($_FILES['userpic']['tmp_name'],$target);
       //try to delete the uploaded file in the temporary folder
       @unlink($_FILES['userpic']['name']);   //@sign suppress the error
       //echo $target;
 
-        echo '<p>Your new account has been successfully created. You\'re now ready to.</p>';
-
+        //echo '<p>Your new account has been successfully created. You\'re now ready to.</p>';
+    
+           $_SESSION['userid'] = mysqli_insert_id($dbc);
+          $_SESSION['username'] = $username;
+          setcookie('userid', mysqli_insert_id($dbc) , time() + (60 * 60 * 24 * 30));    // expires in 30 days
+          setcookie('username', $username, time() + (60 * 60 * 24 * 30));  // expires in 30 days
+          
+      header('location: '. HOME_URL);
         mysqli_close($dbc);
         exit();
-      }
+
+        /// require_once('php/startsession.php');
+  
+
+  }
       else {
         // An account already exists for this username, so display an error message
         $nameErr="An account already exists for this username. Please use a different address.";
@@ -68,8 +73,19 @@ $picErr="select profile picture";
   }
 
   mysqli_close($dbc);
-
+  //first place the login script
+  require_once('php/login.php');
+//needs to set page title before including header template
+  $page_title = 'Appstore For All';
+  require_once('templates/header.php');//includes stylesheets etc
+  require_once('templates/navigation.php');
+  echo '<div class="container">';
+    require_once('templates/searchbar.php');
+echo '</div>';
 ?>
+<br>
+<br>
+<br>
 <div class="container">
     <div class="row">
         <div class="col-md-4 col-md-offset-4">
@@ -129,5 +145,7 @@ $picErr="select profile picture";
 </div>
 </div> 
   <?php
+  //render the login modal
+    require_once('templates/loginform.php');
 require_once("templates/footer.php");
   ?>

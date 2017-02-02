@@ -7,17 +7,19 @@
 	require_once('templates/header.php');//includes stylesheets etc
 
 
-//echo '<a href="admin.php">Temp admin</a>'	;
+
 	require_once('templates/navigation.php');
 
 	echo '<div class="">';
 	
 		echo '<div class="container">';
 		require_once('templates/searchbar.php');
+echo '</div>';
 
-		//require_once('templates/slider/slider.php');
+		require_once('templates/slider/slider.php');
 
 		//carousel
+		echo '<div class="container">';
 		//require_once('templates/carousel.php');
 		require_once("templates/homepageapps.php");
 		
@@ -26,6 +28,7 @@
 
 		require_once("templates/footer.php");
 		echo '</div>';
+
 	echo '</div>';
 	
 ?>

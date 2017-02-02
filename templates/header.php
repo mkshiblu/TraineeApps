@@ -17,6 +17,6 @@ require_once('php/startsession.php');
     <link rel="stylesheet"  href="css/styles.css" />
      <link rel="stylesheet"  href="css/navbar.css" />
      <link rel="stylesheet"  href="css/colors.css" />
-     <link rel="stylesheet"  href="css/appcard.css" />
+    
  </head>
 <body class="theme">
