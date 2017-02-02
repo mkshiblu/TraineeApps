@@ -1,4 +1,5 @@
 <?php
+
 /*THIS SCRIPT CAN BE CALLED IN TWO WAYS.FIRST, CLICKING ON REGISTER  BUTTON IN HOMEPAGE 
 AND SECONDLY CLICKING ON THE SUBMIT BUTTON  IN CREATEACCOUNT I.E. THIS PAGE
  WHICH ALSO GENERATES A 'POST' REQUEST*/
@@ -37,7 +38,8 @@ session_start();
 		
 	<body>
 
-
+		<?/*php require_once('parts/header.php'); */?> 
+	
 		<!--THE REGISTRATION FORM -->
 		<div class = "container col-sm-8 col-sm-offset-2 col-md-7 col-md-offset-3 col-lg-5 col-lg-offset-3">
 <!--================================================THE FORM AREA======================================-->

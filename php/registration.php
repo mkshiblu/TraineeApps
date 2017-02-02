@@ -12,7 +12,7 @@ SHOW A SUCCESSFUL MESSAGE TO THE USER AND HIDE THE REGISTRATION FORM
 
 //include the necessaray files
 require_once('dbconnectvars.php');
-
+require_once('appvariables.php');
 //this variable is used to show the user that registration has been successful
 $isRegSuccessfull = false;
 
@@ -22,15 +22,15 @@ $isRegSuccessfull = false;
    //save the data inserted by the user
 	$username = $_POST['username'];
 	$password = $_POST['password'];
-//	$userPicName =  $_FILES['userpic']['name']; //abc.gif, bdc.png?
+	$userpic =  $_FILES['userpic']['name']; //abc.gif, bdc.png?
 
 	//TO DO some check for porifle picture file type,size etc
   //  $userPic = '' . time() .$userPicName; //avoid replacement of same name img by add time() 
 	//if image is not valid then $userPicName = NULL;
 
-	echo $username;
-	echo $password;
-	//echo $userPic;
+//	echo $username;
+//	echo $password;
+//	echo $userPic;
 
 //create codes for form validations
 
@@ -49,23 +49,21 @@ $isRegSuccessfull = false;
 		}
 
 	//create insert query
-	 // 		 "INSERT INTO guitarwars VALUES (0, NOW(), '$name', '$score', '$screenshot')";
 	$query = "INSERT INTO  users (username, password/* ,userPic*/) 
 						  VALUES ('$username', '$password'/*, '$userPic'*/)";
 	
 	//query
 	$result = mysqli_query($dbc,$query);
-/*
-	//===========TODO if result query is successfull then 
-	 $target = ''.IMG_PATH.$userPic;
 
+	//===========TODO if result query is successfull then 
+	$target = '../'.IMG_PATH.$username;
     //move the uploaded file to iamges folder
      move_uploaded_file($_FILES['userpic']['tmp_name'],$target);
 
 	//try to delete the uploaded file in the temporary folder
-      @unlink($_FILES['screenshot']['name']);   //@sign suppress the error
+      @unlink($_FILES['userpic']['name']);   //@sign suppress the error
       echo $target;
-*/
+
 
 	$isRegSuccessfull = true;	
 	$userid = mysqli_insert_id($dbc); //this function return last inserted row's id i.e. userID
