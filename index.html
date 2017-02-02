@@ -1,105 +1,16 @@
 <!doctype html>
-<html lan="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Trainee Apps</title>
-		<link rel="stylesheet"  href="css/bootstrap.css">
-		<link rel="stylesheet"  href="css/style.css">
-		<script type="text/javascript" src="js/bootstrap.js"></script>
-	
-	</head>
-	<body>
-		<!----LOGO , NAME, AND SIGN IN BUTTON -->
-		<header class="row">
-			
-			<img class="logo"src="img/logo.png" alt="Logo">
-			<em class=""> Trainee Apps</em>		
-			<button class="col-xs-offset-4"type="button">Sign in</button></br>
-		</header>
-		<!--NAVIGATION BAR ---------------->
-		<nav>
-			<ul>
-				<li><a href="">Home </a> </li>
-				<li><a href="">News</a> </li>
-				<li><a href="">Developers</a> </li>
-				<li><a href="">Contuct us</a> </li>
-			</ul>
-		</nav>
-		
-		<!--search filter area-->
-	<div id="filters">
-		<h2>Search Filters </h2>
-		<form action="" method="POST" class="theme">
-			<p>
-				<label for="platform" >Platform<br></label> 
-				<select id="platform">
-					<option value="all">All</option>
-					<option value="android">Android</option>
-					<option value="ios">iOS</option>
-					<option value="windowsphone">Windows Phone</option>
-				</select>
-			</p>
-			<p>
-				<label for="category" >Category<br></label>
-				<select id="category" >
-					<option value="all" >All</option> 
-					<option value="apps" >Apps</option>
-					<option value="games" >Games</option>
-				</select>
-			</p>
-	<!--*****************************BELOW v  NEEDS MODIFICATIONS USING SCRIPT**********************************-->		
-			<p>
-				<label for="sub-cat" >Sub-Categories<br></label>
-				<select id="sub-cat" ><!--filters will be changed upon main category selection & also sorted-->
-					<option value="all" >All</option> 
-					<option value="gamegenre" >Need Script</option>
-					<option value="gam" >Adventure</option>
-				</select>
-			</p>
-						
-	<!--***************************** TOP ^ NEEDS MODIFICATIONS USING SCRIPT**********************************-->		
-	
-			<p>
-				<label for="rating" >Rating<br></label>
-				<select id="rating" >
-					<option value="all" >All</option> 
-					<option value="apps" >Apps</option>
-					<option value="games" >Games</option>
-				</select>
-			</p>
-			<p>
-				<label for="price" >price<br></label>
-				<select id="price" >
-					<option value="all" >All</option> 
-					<option value="free" >Free</option>
-					<option value="paid" >Paid</option>
-				</select>
-			</p>
+<html>
+	<meta charset = "UTF-8">
 
-		</form>	
-	</div>
-	<!--END OF FILTER AREA-->
-	<!-- SEARCH FIELD ------>
-		<div>
-			<form>
-				<input type="search" name="sitesearch" placeholder="App Name" results=5 autosave=some_unique_value >
-				<input type="button" value="Search">
-			</form>
-		</div>
-	<!-- these options will be changed-->
-	<img class="img-responsive" src="img/app1.png" alt="display" width=400 height=300  >
-	<!--welcome area-->
-	<article>
-		<header>Welcome!</header>
-		<p>Welcome to <em>Trainee Apps </em>- The ultimate app store for newbie developers.Unlike other appstores we host non-professional or semi-professional apps.The reason behind it is that there are numerous developers out there who have finished/almost finished apps but have failed to publish it to popular appstores because most of them requires a <em>fee</em>.Usually they have a complex publishing procedure.But here in <em>Trainee Apps</em> you just have to create a <em>completely free</em> account and start publishing your apps and games.<em>Newbie Developers</em>,<em>Students</em>,<em>Semi-professional</em> all are welcome here.<em>Trainee Apps</em> give these <q>Trainee</q> developers a chance to show their products.They can use this store as a great portfolio.Students can upload their software development projects which can be used as a great reference to their potential hirer.Visitors can give review and ratings without creating an account.The site is easily accessible both from desktops and smartphones. </p>
+	<h1>THIS IS THE HOME PAGE</h1>
+	<h2>ENTER USER NAME AND PASSWORD TO LOG IN </h2>
+	<h2>if you are a new user click the signup button<br>if you are successfully logged in the whole form area will be gone and will be replaced by your name and photo</h2>
+	<form>
+		<input type = "text" placeholder="Username/email">
+		<input type = "password" placeholder = "password" >
+		<button type = "submit">Login</button>
+	</form>
+	<p> Or, </p>
+	<button type = "button" >Sign up</button>
 
-		<p>What are waiting for?If you are a developer publish your dream apps or if you're in need of a potential member for your great team,start searching for our trainee developers.</p>
-
-	</article>
-	<!--the footer area-->
-	<footer>
-		<p>@Copyright Trainee Apps developers team </p>
-	</footer>
-	</body>	
 </html>
