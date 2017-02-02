@@ -1,3 +1,3 @@
 <?php
-	define(IMG_PATH,'images/'); //the uploaded images will be saved in this path
+	define(APP_IMG_PATH,'images/appimage/'); //the uploaded images will be saved in this path
 ?>

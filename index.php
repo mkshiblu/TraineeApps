@@ -18,19 +18,23 @@
 
 		<!--header area containing logo,app name, log in form and regiser button -->
 		<?php require_once('parts/header.php') ?>
-
+		<form action="search.php" method="get">
+			<input type="text" name="tahsin">
+			<button type="submit">search</button>
+		</form>
 		<!--THE IMAGE SLIDESHOW AREA-->
 		<div class = "container">   <!--puts element in the middle-->
 			<div class = "jumbotron">
 				<h3>Here the image slideshow </h3>
 			</div>
 		</div>
-			
+	
 		<!--the search result area-->
 		<div class = "row">
 			<div class = "col-lg-9">
 					<div class = "panel panel">
-
+						<?php require_once('parts/middle.php') ?>
+						
 					</div>
 			</div>
 

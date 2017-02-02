@@ -25,7 +25,7 @@
   setcookie('username', '', time() - 3600);
 
   // Redirect to the home page
-  $home_url = 'http://' . $_SERVER['HTTP_HOST'] .'/v6/index.php';
+  $home_url = 'http://' . $_SERVER['HTTP_HOST'] .'/v7/index.php';
 //  echo $home_url;
  header('Location: ' . $home_url);
 ?>
