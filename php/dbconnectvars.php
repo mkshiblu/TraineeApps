@@ -6,6 +6,21 @@
 	define(DB_PASSWORD,'');
 	define(DB_NAME,'appstore');
 
+
+
+//==================================
+	//********QUERIES
+//=============================
+
+	//define(DISPLAY_APP, "SELECT app_id, app_name, rating, total_downloads, upload_date, description, file, image FROM apps " .
+	//"ORDER BY upload_date DESC LIMIT 5");
+
+
+
+
+	
+//mov this into other file
+	define(HOME_URL , 'http://' . $_SERVER['HTTP_HOST'] . '/v8/index.php');
 //users table's column names
 
 	define (userid,'userID');

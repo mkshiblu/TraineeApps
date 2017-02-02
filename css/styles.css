@@ -8,3 +8,10 @@
     width: 130px;
     height: 190px;
 }
+
+.card{
+
+	display: inline;
+	width: 250px;
+	height: 320px;
+}
