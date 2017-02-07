@@ -8,6 +8,15 @@ Semester : 4th year
 Course: Database Lab 1 / Web Development Lab 1
 ````
 
+
+### Technologies Used
+
+- PHP
+- MySQL
+- XAMPP
+- Bootstrap
+- Javascript & JQuery
+
 ### How to Run
 
 1.  Download and extract the source and move the folder to the htdocs folder of XAMPP Server.
