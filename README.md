@@ -1,6 +1,13 @@
 # Trainee Apps
 A demo app store for amateur app developers. It was the lab project for `Database Lab` in university. The code is written in core PHP and  MySQL was used as the database. Bootstrap was used to make the site responsive.
 
+
+````
+Year coded: 2014
+Semester : 4th year
+Course: Database Lab 1 / Web Development Lab 1
+````
+
 ### How to Run
 
 1.  Download and extract the source and move the folder to the htdocs folder of XAMPP Server.
